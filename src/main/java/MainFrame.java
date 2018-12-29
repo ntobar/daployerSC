@@ -18,6 +18,7 @@ public class MainFrame extends JFrame {
   public MainFrame() {
 
 
+    //Contracts
     this.contracts = new ArrayList<>();
 
 
