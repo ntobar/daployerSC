@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -22,7 +23,6 @@ public class Controller implements ActionListener {
     if(e.getActionCommand().equals("uploadSCButton")) {
 
 
-
       int returnVal = homeView.getInfoPanel().getUploadContract().showOpenDialog(homeView);
 
       if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -41,6 +41,20 @@ public class Controller implements ActionListener {
       } else {
         log.append("Open command cancelled by user." + "/n");
       }
+
+
+    } else if(e.getActionCommand().equals("deployContract")) {
+
+      CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
+      cl.show(homeView.getDeployPanel(), "deployPanel");
+
+
+
+    } else if(e.getActionCommand().equals("interactContract")) {
+
+      CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
+      cl.show(homeView.getInteractPanel(), "interactPanel");
+
     }
 
   }
