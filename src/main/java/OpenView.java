@@ -4,6 +4,9 @@ import javax.swing.*;
 import javax.swing.border.BevelBorder;
 
 public class OpenView extends JPanel {
+  private JPanel optionPanel;
+  private InteractPanel interactPanel;
+  private DeployPanel deployPanel;
   private JButton deployButton;
   private JButton interactButton;
   private Color MAIA_BG_COLOR;
@@ -21,6 +24,19 @@ public class OpenView extends JPanel {
     c.insets = new Insets(15,0,15,0);
     //this.setLayout(new GridBagLayout());
     this.setLayout(new CardLayout());
+
+    //OPTION PANEL SETUP
+    optionPanel = new JPanel();
+
+    interactPanel = new InteractPanel();
+    deployPanel = new DeployPanel();
+
+
+    //optionPanel.setLayout(new CardLayout());
+    optionPanel.setLayout(new GridBagLayout());
+
+
+
 
     //----------------------------------------------------------------------------------------------
     //------------------------------------- BUTTON SETUP -------------------------------------------
@@ -40,8 +56,8 @@ public class OpenView extends JPanel {
 
     c.gridx = 1;
     c.gridy = 1;
-    this.add(deployButton, c);
-    //this.add(deployButton);
+//    this.add(deployButton, c);
+    optionPanel.add(deployButton, c);
 
 
     interactButton = new JButton("Interact with an existing Smart Contract");
@@ -56,8 +72,14 @@ public class OpenView extends JPanel {
 
     c.gridx = 1;
     c.gridy = 2;
-    this.add(interactButton, c);
+//    this.add(interactButton, c);
+    optionPanel.add(interactButton, c);
     //this.add(interactButton);
+
+    this.add(optionPanel, "optionPanel");
+    this.add(deployPanel, "deployPanel");
+    this.add(interactPanel, "interactPanel");
+    //this.add()
   }
 
 

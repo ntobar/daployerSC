@@ -20,6 +20,9 @@ public class Controller implements ActionListener {
   @Override
   public void actionPerformed(ActionEvent e) {
 
+//    CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
+//    cl.show(homeView.getOpenView(), "optionPanel");
+
     if(e.getActionCommand().equals("uploadSCButton")) {
 
 
@@ -45,19 +48,22 @@ public class Controller implements ActionListener {
 
     } else if(e.getActionCommand().equals("deployContract")) {
 
+      System.out.println("reached deploy button");
+
       //homeView.getOpenView().setLayout(new CardLayout());
 
 //      CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
-      CardLayout cl = (CardLayout) (homeView.getDeployPanel().getLayout());
-      cl.show(homeView.getDeployPanel(), "deployPanel");
+      CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
+      cl.show(homeView.getOpenView(), "deployPanel");
 
 
 
     } else if(e.getActionCommand().equals("interactContract")) {
+      System.out.println("reached Interact button");
 
 //      CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
-      CardLayout cl = (CardLayout) (homeView.getInteractPanel().getLayout());
-      cl.show(homeView.getInteractPanel(), "interactPanel");
+      CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
+      cl.show(homeView.getOpenView(), "interactPanel");
 
     }
 
