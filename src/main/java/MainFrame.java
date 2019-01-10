@@ -39,6 +39,8 @@ public class MainFrame extends JFrame {
 
 
 
+
+
     openView = new OpenView();
     this.add(openView);
 

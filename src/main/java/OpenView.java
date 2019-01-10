@@ -20,6 +20,7 @@ public class OpenView extends JPanel {
     GridBagConstraints c = new GridBagConstraints();
     c.insets = new Insets(15,0,15,0);
     this.setLayout(new GridBagLayout());
+    //this.setLayout(new CardLayout());
 
     //----------------------------------------------------------------------------------------------
     //------------------------------------- BUTTON SETUP -------------------------------------------

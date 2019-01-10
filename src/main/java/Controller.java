@@ -45,6 +45,8 @@ public class Controller implements ActionListener {
 
     } else if(e.getActionCommand().equals("deployContract")) {
 
+      //homeView.getOpenView().setLayout(new CardLayout());
+
       CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
       cl.show(homeView.getDeployPanel(), "deployPanel");
 
