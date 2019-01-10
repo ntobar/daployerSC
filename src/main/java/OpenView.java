@@ -27,6 +27,7 @@ public class OpenView extends JPanel {
 
     //OPTION PANEL SETUP
     optionPanel = new JPanel();
+    optionPanel.setBackground(MAIA_BG_COLOR);
 
     interactPanel = new InteractPanel();
     deployPanel = new DeployPanel();
