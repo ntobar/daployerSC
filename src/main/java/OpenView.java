@@ -19,8 +19,8 @@ public class OpenView extends JPanel {
     this.setBackground(MAIA_BG_COLOR);
     GridBagConstraints c = new GridBagConstraints();
     c.insets = new Insets(15,0,15,0);
-    this.setLayout(new GridBagLayout());
-    //this.setLayout(new CardLayout());
+    //this.setLayout(new GridBagLayout());
+    this.setLayout(new CardLayout());
 
     //----------------------------------------------------------------------------------------------
     //------------------------------------- BUTTON SETUP -------------------------------------------
@@ -41,7 +41,7 @@ public class OpenView extends JPanel {
     c.gridx = 1;
     c.gridy = 1;
     this.add(deployButton, c);
-
+    //this.add(deployButton);
 
 
     interactButton = new JButton("Interact with an existing Smart Contract");
@@ -57,6 +57,7 @@ public class OpenView extends JPanel {
     c.gridx = 1;
     c.gridy = 2;
     this.add(interactButton, c);
+    //this.add(interactButton);
   }
 
 

@@ -13,6 +13,9 @@ public class DeployPanel extends JPanel {
     this.MAIA_LOGO_COLOR = new Color(144, 195, 240);
 
 
+    this.setBackground(MAIA_BG_COLOR);
+
+
 
 
 

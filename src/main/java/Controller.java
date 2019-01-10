@@ -47,14 +47,16 @@ public class Controller implements ActionListener {
 
       //homeView.getOpenView().setLayout(new CardLayout());
 
-      CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
+//      CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
+      CardLayout cl = (CardLayout) (homeView.getDeployPanel().getLayout());
       cl.show(homeView.getDeployPanel(), "deployPanel");
 
 
 
     } else if(e.getActionCommand().equals("interactContract")) {
 
-      CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
+//      CardLayout cl = (CardLayout) (homeView.getOpenView().getLayout());
+      CardLayout cl = (CardLayout) (homeView.getInteractPanel().getLayout());
       cl.show(homeView.getInteractPanel(), "interactPanel");
 
     }
