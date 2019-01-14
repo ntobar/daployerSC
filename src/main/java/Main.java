@@ -2,9 +2,9 @@ import javax.swing.*;
 
 public class Main {
 
-  //solcjs  ./src/main/java/ERC20Flattened.sol --bin --abi --optimize -o ./src/main/java
+  //solcjs  ./src/main/java/Mortal.sol --bin --abi --optimize -o ./src/main/java
 
-  //sudo /Users/nicolastobar/desktop/web3j/web3j-3.6.0/bin/web3j solidity generate ./src/main/java/ERC20.bin ./src/main/java/ERC20.abi -o ./src/main/java -p com.tobar
+  //sudo /Users/nicolastobar/desktop/web3j/web3j-3.6.0/bin/web3j solidity generate ./src/main/java/Mortal.bin ./src/main/java/Mortal.abi -o ./src/main/java -p com.tobar
   //Cards.ICard card = new Cards.Card();
 
 
