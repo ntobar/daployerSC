@@ -32,6 +32,10 @@ public class DeployPanel extends JPanel {
             0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
 
+    this.setLayout(new GridBagLayout());
+
+
+
     //--------------------------------------------------------------------------------------------
     //------------------------------------- Logo Panel setup -------------------------------------
     //--------------------------------------------------------------------------------------------
@@ -47,6 +51,9 @@ public class DeployPanel extends JPanel {
     JLabel logoLabel = new JLabel("Interact");
 
     logoPanel.add(logoLabel);
+    //logoPanel.setPreferredSize(new Dimension(this.getWidth(), 300));
+    System.out.println(this.getWidth());
+    logoPanel.setPreferredSize(new Dimension(this.getWidth(), 500));
 
     this.add(logoPanel);
 
