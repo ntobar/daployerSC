@@ -3,9 +3,18 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 
+
+/**
+ * NEED at LEAST 4 or 5 Panels
+ */
 public class DeployPanel extends JPanel {
   private Color MAIA_BG_COLOR;
   private Color MAIA_LOGO_COLOR;
+  private JPanel logoPanel;
+  private JPanel uploadPanel;
+  private JPanel contractsPanel;
+  private JPanel fieldsPanel;
+  private JPanel resultPanel;
 
 
   public DeployPanel() {
@@ -22,6 +31,20 @@ public class DeployPanel extends JPanel {
     this.setBorder(BorderFactory.createTitledBorder(border, "Deploy a Smart Contract",
             0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
+
+    //--------------------------------------------------------------------------------------------
+    //------------------------------------- Logo Panel setup -------------------------------------
+    //--------------------------------------------------------------------------------------------
+
+    logoPanel = new JPanel();
+    logoPanel.setBackground(MAIA_BG_COLOR);
+    
+
+
+
+
+
+
 
 
 
