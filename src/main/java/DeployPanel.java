@@ -36,9 +36,20 @@ public class DeployPanel extends JPanel {
     //------------------------------------- Logo Panel setup -------------------------------------
     //--------------------------------------------------------------------------------------------
 
+    Border logoPanelBorder = BorderFactory.createMatteBorder(2, 2, 2, 2,
+            MAIA_LOGO_COLOR);
+
+
     logoPanel = new JPanel();
     logoPanel.setBackground(MAIA_BG_COLOR);
-    
+    logoPanel.setBorder(logoPanelBorder);
+
+    JLabel logoLabel = new JLabel("Interact");
+
+    logoPanel.add(logoLabel);
+
+    this.add(logoPanel);
+
 
 
 
