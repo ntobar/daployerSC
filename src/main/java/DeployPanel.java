@@ -32,7 +32,11 @@ public class DeployPanel extends JPanel {
             0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
 
-    this.setLayout(new GridBagLayout());
+    GridBagConstraints c = new GridBagConstraints();
+
+//    this.setLayout(new GridBagLayout());
+    this.setLayout(new GridLayout());
+//    c.insets.set(10,10,10,10);
 
 
 
@@ -47,15 +51,53 @@ public class DeployPanel extends JPanel {
     logoPanel = new JPanel();
     logoPanel.setBackground(MAIA_BG_COLOR);
     logoPanel.setBorder(logoPanelBorder);
+//    logoPanel.setPreferredSize(new Dimension(900,200));
 
     JLabel logoLabel = new JLabel("Interact");
 
+    c.gridx = 0;
+    c.gridy = 0;
+
+
     logoPanel.add(logoLabel);
     //logoPanel.setPreferredSize(new Dimension(this.getWidth(), 300));
-    System.out.println(this.getWidth());
-    logoPanel.setPreferredSize(new Dimension(this.getWidth(), 500));
+//    System.out.println(this.getWidth());
+//    logoPanel.setPreferredSize(new Dimension(this.getWidth(), 500));
+
 
     this.add(logoPanel);
+
+    //UPLOAD PANEL
+
+    uploadPanel = new JPanel();
+    uploadPanel.setBackground(MAIA_BG_COLOR);
+    uploadPanel.setBorder(logoPanelBorder);
+//    uploadPanel.setPreferredSize(new Dimension(900,200));
+
+    JLabel uploadLabel = new JLabel("Upload");
+
+    c.gridx = 0;
+    c.gridy = 0;
+
+
+    uploadPanel.add(uploadLabel);
+
+    c.gridx = 1;
+    c.gridy = 1;
+
+    this.add(uploadPanel);
+
+    c.gridx = 1;
+    c.gridy = 1;
+
+    c.gridx = 2;
+    c.gridy = 1;
+
+    c.gridx = 3;
+    c.gridy = 1;
+
+
+
 
 
 
