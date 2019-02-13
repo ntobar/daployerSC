@@ -32,7 +32,8 @@ public class DeployPanel extends JPanel {
 
 
     this.setBackground(MAIA_BG_COLOR);
-    this.setLayout(new GridBagLayout());
+//    this.setLayout(new GridBagLayout());
+    this.setLayout(new GridLayout(3, 1));
 
 
     Border border = BorderFactory.createMatteBorder(6, 6, 6, 6,
@@ -86,7 +87,7 @@ public class DeployPanel extends JPanel {
 //    logoPanel.setPreferredSize(new Dimension(this.getWidth(), 500));
 
 
-    this.add(logoPanel, c);
+    this.add(logoPanel);
 
     //UPLOAD PANEL
 
@@ -105,7 +106,7 @@ public class DeployPanel extends JPanel {
     c.gridy = 1;
     c.fill = GridBagConstraints.BOTH;
 
-    this.add(uploadPanel, c);
+    this.add(uploadPanel);
 
     //Contracts Panel
     contractsPanel = new JPanel();
@@ -122,7 +123,7 @@ public class DeployPanel extends JPanel {
     c.gridx = 0;
     c.gridy = 2;
 
-    this.add(contractsPanel, c);
+    this.add(contractsPanel);
 
 
 
@@ -141,7 +142,7 @@ public class DeployPanel extends JPanel {
     c.gridx = 0;
     c.gridy = 3;
 
-    this.add(fieldsPanel, c);
+    this.add(fieldsPanel);
 
     //result Panel
     resultPanel = new JPanel();
@@ -158,7 +159,7 @@ public class DeployPanel extends JPanel {
     c.gridx = 1;
     c.gridy = 3;
 
-    this.add(resultPanel, c);
+    this.add(resultPanel);
 
 
 
