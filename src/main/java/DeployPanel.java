@@ -13,6 +13,8 @@ import javax.swing.border.Border;
 public class DeployPanel extends JPanel {
   private Color MAIA_BG_COLOR;
   private Color MAIA_LOGO_COLOR;
+  private JPanel topPanel;
+  private JPanel bottomPanel;
   private JPanel logoPanel;
   private JPanel uploadPanel;
   private JPanel contractsPanel;
@@ -33,7 +35,7 @@ public class DeployPanel extends JPanel {
 
     this.setBackground(MAIA_BG_COLOR);
 //    this.setLayout(new GridBagLayout());
-    this.setLayout(new GridLayout(5, 0, 10, 10));
+//    this.setLayout(new GridLayout(5, 0, 10, 10));
 
 
     Border border = BorderFactory.createMatteBorder(6, 6, 6, 6,
@@ -61,6 +63,16 @@ public class DeployPanel extends JPanel {
     Border logoPanelBorder = BorderFactory.createMatteBorder(2, 2, 2, 2,
             MAIA_LOGO_COLOR);
 
+    topPanel = new JPanel();
+    topPanel.setBackground(MAIA_BG_COLOR);
+    topPanel.setBorder(logoPanelBorder);
+    topPanel.setLayout(new GridLayout(0, 1, 10, 10));
+    topPanel.setPreferredSize(new Dimension(975,300));
+
+    bottomPanel = new JPanel();
+    bottomPanel.setBackground(MAIA_BG_COLOR);
+    bottomPanel.setBorder(logoPanelBorder);
+
 
     logoPanel = new JPanel();
     logoPanel.setBackground(MAIA_BG_COLOR);
@@ -79,7 +91,7 @@ public class DeployPanel extends JPanel {
 //    logoPanel.setPreferredSize(new Dimension(this.getWidth(), 500));
 
 
-    this.add(logoPanel);
+    topPanel.add(logoPanel);
 
     //Contracts Panel
     contractsPanel = new JPanel();
@@ -96,7 +108,7 @@ public class DeployPanel extends JPanel {
     c.gridx = 0;
     c.gridy = 2;
 
-    this.add(contractsPanel);
+    topPanel.add(contractsPanel);
 
 
 
@@ -115,24 +127,27 @@ public class DeployPanel extends JPanel {
     c.gridx = 0;
     c.gridy = 3;
 
-    this.add(fieldsPanel);
+    bottomPanel.add(fieldsPanel);
+
+    this.add(topPanel);
+    this.add(bottomPanel);
 
     //result Panel
-    resultPanel = new JPanel();
-    resultPanel.setBackground(MAIA_BG_COLOR);
-    resultPanel.setBorder(logoPanelBorder);
-//    resultPanel.setPreferredSize(new Dimension(300,200));
-
-    JLabel resultLabel = new JLabel("Upload");
-
-
-
-    resultPanel.add(resultLabel);
-
-    c.gridx = 1;
-    c.gridy = 3;
-
-    this.add(resultPanel);
+//    resultPanel = new JPanel();
+//    resultPanel.setBackground(MAIA_BG_COLOR);
+//    resultPanel.setBorder(logoPanelBorder);
+////    resultPanel.setPreferredSize(new Dimension(300,200));
+//
+//    JLabel resultLabel = new JLabel("Upload");
+//
+//
+//
+//    resultPanel.add(resultLabel);
+//
+//    c.gridx = 1;
+//    c.gridy = 3;
+//
+//    this.add(resultPanel);
 
 
 
