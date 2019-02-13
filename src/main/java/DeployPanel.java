@@ -50,15 +50,7 @@ public class DeployPanel extends JPanel {
 
 
 
-    //SIZING troubleshooting
 
-    System.out.println("Width= " + this.getWidth());
-    System.out.println("PrefferedWidth= " + this.getPreferredSize().width);
-
-    System.out.println("Height= " + this.getHeight());
-    System.out.println("PrefferedHeighth= " + this.getPreferredSize().height);
-    System.out.println("Size: " + this.getSize());
-    //-----------------------------------------------------------------------
 
 
 
@@ -82,31 +74,12 @@ public class DeployPanel extends JPanel {
 
 
     logoPanel.add(logoLabel);
-    logoPanel.setPreferredSize(new Dimension(800, 100));
+//    logoPanel.setPreferredSize(new Dimension(800, 100));
 //    System.out.println(this.getWidth());
 //    logoPanel.setPreferredSize(new Dimension(this.getWidth(), 500));
 
 
     this.add(logoPanel);
-
-    //UPLOAD PANEL
-
-    uploadPanel = new JPanel();
-    uploadPanel.setBackground(MAIA_BG_COLOR);
-    uploadPanel.setBorder(logoPanelBorder);
-    //uploadPanel.setPreferredSize(new Dimension(900,50));
-
-    JLabel uploadLabel = new JLabel("Upload");
-
-
-
-    uploadPanel.add(uploadLabel);
-
-    c.gridx = 0;
-    c.gridy = 1;
-    c.fill = GridBagConstraints.BOTH;
-
-    this.add(uploadPanel);
 
     //Contracts Panel
     contractsPanel = new JPanel();
