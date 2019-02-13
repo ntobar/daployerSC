@@ -38,7 +38,7 @@ public class DeployPanel extends JPanel {
 //    this.setLayout(new GridLayout(5, 0, 10, 10));
 
 
-    Border border = BorderFactory.createMatteBorder(6, 6, 6, 6,
+    Border border = BorderFactory.createMatteBorder(6, 0, 6, 0,
             MAIA_LOGO_COLOR);
 
     this.setBorder(BorderFactory.createTitledBorder(border, "Deploy a Smart Contract",
@@ -48,7 +48,7 @@ public class DeployPanel extends JPanel {
     GridBagConstraints c = new GridBagConstraints();
 
 
-    c.insets.set(10,10,10,10);
+//    c.insets.set(10,10,10,10);
 
 
 
@@ -67,11 +67,12 @@ public class DeployPanel extends JPanel {
     topPanel.setBackground(MAIA_BG_COLOR);
     topPanel.setBorder(logoPanelBorder);
     topPanel.setLayout(new GridLayout(0, 1, 10, 10));
-    topPanel.setPreferredSize(new Dimension(975,300));
+    topPanel.setPreferredSize(new Dimension(975,250));
 
     bottomPanel = new JPanel();
     bottomPanel.setBackground(MAIA_BG_COLOR);
     bottomPanel.setBorder(logoPanelBorder);
+    bottomPanel.setPreferredSize(new Dimension(975, 500));
 
 
     logoPanel = new JPanel();
@@ -79,13 +80,18 @@ public class DeployPanel extends JPanel {
     logoPanel.setBorder(logoPanelBorder);
     //logoPanel.setPreferredSize(new Dimension(900,100));
 
-    JLabel logoLabel = new JLabel("Interact");
+    JLabel logoLabel = new JLabel("<html><p><span color=#90C3F0 style=\""
+            + "font-family: terminal, monaco; font-size: 36pt;\"> D E P L O Y </span></p>");
+
+    JLabel descLabel = new JLabel("<html><p><span color=#90C3F0 style=\""
+            + "font-family: terminal, monaco; font-size: 24pt;\"> a Smart Contract into the Blockchain </span></p>");
 
     c.gridx = 0;
     c.gridy = 0;
 
 
     logoPanel.add(logoLabel);
+    logoPanel.add(descLabel);
 //    logoPanel.setPreferredSize(new Dimension(800, 100));
 //    System.out.println(this.getWidth());
 //    logoPanel.setPreferredSize(new Dimension(this.getWidth(), 500));
