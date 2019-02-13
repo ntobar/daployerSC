@@ -1,4 +1,7 @@
+import org.web3j.tx.Contract;
+
 import java.awt.*;
+import java.util.ArrayList;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -15,15 +18,22 @@ public class DeployPanel extends JPanel {
   private JPanel contractsPanel;
   private JPanel fieldsPanel;
   private JPanel resultPanel;
+  private ArrayList<Contract> contracts;
 
 
   public DeployPanel() {
 
+    this.contracts = new ArrayList<>();
+
     this.MAIA_BG_COLOR = new Color(40, 45, 51);
     this.MAIA_LOGO_COLOR = new Color(144, 195, 240);
 
+//    this.setPreferredSize(new Dimension(1000, 1000));
+
 
     this.setBackground(MAIA_BG_COLOR);
+    this.setLayout(new GridBagLayout());
+
 
     Border border = BorderFactory.createMatteBorder(6, 6, 6, 6,
             MAIA_LOGO_COLOR);
@@ -34,8 +44,20 @@ public class DeployPanel extends JPanel {
 
     GridBagConstraints c = new GridBagConstraints();
 
-    this.setLayout(new GridBagLayout());
+
     c.insets.set(10,10,10,10);
+
+
+
+    //SIZING troubleshooting
+
+    System.out.println("Width= " + this.getWidth());
+    System.out.println("PrefferedWidth= " + this.getPreferredSize().width);
+
+    System.out.println("Height= " + this.getHeight());
+    System.out.println("PrefferedHeighth= " + this.getPreferredSize().height);
+    System.out.println("Size: " + this.getSize());
+    //-----------------------------------------------------------------------
 
 
 
@@ -50,7 +72,7 @@ public class DeployPanel extends JPanel {
     logoPanel = new JPanel();
     logoPanel.setBackground(MAIA_BG_COLOR);
     logoPanel.setBorder(logoPanelBorder);
-    logoPanel.setPreferredSize(new Dimension(900,100));
+    //logoPanel.setPreferredSize(new Dimension(900,100));
 
     JLabel logoLabel = new JLabel("Interact");
 
@@ -59,7 +81,7 @@ public class DeployPanel extends JPanel {
 
 
     logoPanel.add(logoLabel);
-    //logoPanel.setPreferredSize(new Dimension(this.getWidth(), 300));
+    logoPanel.setPreferredSize(new Dimension(800, 100));
 //    System.out.println(this.getWidth());
 //    logoPanel.setPreferredSize(new Dimension(this.getWidth(), 500));
 
@@ -71,7 +93,7 @@ public class DeployPanel extends JPanel {
     uploadPanel = new JPanel();
     uploadPanel.setBackground(MAIA_BG_COLOR);
     uploadPanel.setBorder(logoPanelBorder);
-    uploadPanel.setPreferredSize(new Dimension(900,50));
+    //uploadPanel.setPreferredSize(new Dimension(900,50));
 
     JLabel uploadLabel = new JLabel("Upload");
 
@@ -81,6 +103,7 @@ public class DeployPanel extends JPanel {
 
     c.gridx = 0;
     c.gridy = 1;
+    c.fill = GridBagConstraints.BOTH;
 
     this.add(uploadPanel, c);
 
@@ -88,7 +111,7 @@ public class DeployPanel extends JPanel {
     contractsPanel = new JPanel();
     contractsPanel.setBackground(MAIA_BG_COLOR);
     contractsPanel.setBorder(logoPanelBorder);
-    contractsPanel.setPreferredSize(new Dimension(900,50));
+//    contractsPanel.setPreferredSize(new Dimension(900,50));
 
     JLabel contractsLabel = new JLabel("Upload");
 
@@ -107,7 +130,7 @@ public class DeployPanel extends JPanel {
     fieldsPanel = new JPanel();
     fieldsPanel.setBackground(MAIA_BG_COLOR);
     fieldsPanel.setBorder(logoPanelBorder);
-//    fieldsPanel.setPreferredSize(new Dimension(300,200));
+    //fieldsPanel.setPreferredSize(new Dimension(300,200));
 
     JLabel fieldsLabel = new JLabel("Upload");
 
