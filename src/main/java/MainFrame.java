@@ -30,6 +30,7 @@ public class MainFrame extends JFrame {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     this.setPreferredSize(new Dimension(1000, 1000));
+    this.setVisible(true);
 
     this.MAIA_BG_COLOR = new Color(40, 45, 51);
     this.MAIA_LOGO_COLOR = new Color(144, 195, 240);
