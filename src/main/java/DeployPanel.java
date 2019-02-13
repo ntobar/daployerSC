@@ -33,7 +33,7 @@ public class DeployPanel extends JPanel {
 
     this.setBackground(MAIA_BG_COLOR);
 //    this.setLayout(new GridBagLayout());
-    this.setLayout(new GridLayout(3, 1));
+    this.setLayout(new GridLayout(5, 0, 10, 10));
 
 
     Border border = BorderFactory.createMatteBorder(6, 6, 6, 6,
