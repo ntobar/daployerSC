@@ -41,7 +41,7 @@ public class DeployPanel extends JPanel {
     Border border = BorderFactory.createMatteBorder(6, 0, 6, 0,
             MAIA_LOGO_COLOR);
 
-    this.setBorder(BorderFactory.createTitledBorder(border, "Deploy a Smart Contract",
+    this.setBorder(BorderFactory.createTitledBorder(border, "Deploy",
             0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
 
@@ -81,17 +81,18 @@ public class DeployPanel extends JPanel {
     //logoPanel.setPreferredSize(new Dimension(900,100));
 
     JLabel logoLabel = new JLabel("<html><p><span color=#90C3F0 style=\""
-            + "font-family: terminal, monaco; font-size: 36pt;\"> D E P L O Y </span></p>");
+            + "font-family: terminal, monaco; font-size: 36pt;\">  D E P L O Y </span></p> " +
+            " <html><p><span color=#90C3F0 style=\"font-family: terminal, monaco; font-size: 16pt;\"> a Smart Contract into the Blockchain </span></p>");
 
-    JLabel descLabel = new JLabel("<html><p><span color=#90C3F0 style=\""
-            + "font-family: terminal, monaco; font-size: 24pt;\"> a Smart Contract into the Blockchain </span></p>");
 
     c.gridx = 0;
     c.gridy = 0;
 
 
     logoPanel.add(logoLabel);
-    logoPanel.add(descLabel);
+    logoPanel.add(new JSeparator(JSeparator.HORIZONTAL),
+            BorderLayout.LINE_START);
+    //logoPanel.add(descLabel);
 //    logoPanel.setPreferredSize(new Dimension(800, 100));
 //    System.out.println(this.getWidth());
 //    logoPanel.setPreferredSize(new Dimension(this.getWidth(), 500));
